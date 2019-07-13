@@ -11,8 +11,14 @@ export class ProductsListComponent implements OnInit {
 
   constructor() { }
 
+  public products = products;
+
   ngOnInit() {
     console.log(products);
+  }
+
+  public share(): void {
+    alert('Shared');
   }
 
 }
