@@ -1,21 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { products } from '../../../mock/products';
+import { Product } from '../../interfaces';
 
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.scss']
 })
-export class ProductsListComponent implements OnInit {
+export class ProductsListComponent {
 
-  constructor() { }
-
-  public products = products;
-
-  ngOnInit() {
-    console.log(products);
-  }
+  public products: Product[] = products;
 
   public share(): void {
     alert('Shared');

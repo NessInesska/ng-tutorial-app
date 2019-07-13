@@ -1,9 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
 /* Global Styles */
+$white: #ffffff;
+
+$gray: #616161;
+$borderGray: #BDBDBD;
+$cartGray: #EEEEEE;
+
+$blue: #1976d2;
 
 * {
   font-family: 'Roboto', Arial, sans-serif;
-  color: #616161;
+  color: $gray;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +39,7 @@ h2 {
 }
 
 h1, h2 {
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 p {
@@ -44,12 +50,12 @@ p {
 
 a {
   cursor: pointer;
-  color: #1976d2;
+  color: $blue;
   text-decoration: none;
-}
 
-a:hover {
-  opacity: 0.8;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 /* Input */
@@ -59,50 +65,51 @@ input {
   border-radius: 2px;
   padding: 8px;
   margin-bottom: 16px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid $borderGray;
 }
 
 label {
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 4px;
   display: block;
   text-transform: uppercase;
 }
 
 /* Button */
-.button, button {
+.button,
+button {
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
   border-radius: 2px;
   font-size: 14px;
   cursor: pointer;
-  background-color: #1976d2;
-  color: white;
+  background-color: $blue;
+  color: $white;
   border: none;
-}
 
-.button:hover, button:hover {
-  opacity: 0.8;
-  font-weight: normal;
-}
+  &:hover {
+    opacity: 0.8;
+    font-weight: normal;
+  }
 
-.button:disabled, button:disabled {
-  opacity: 0.5;
-  cursor: auto;
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
 }
 
 /* Fancy Button */
 
 .fancy-button {
-  background-color: white;
-  color: #1976d2;
-}
+  background-color: $white;
+  color: $blue;
 
-.fancy-button i.material-icons {
-  color: #1976d2;
-  padding-right: 4px;
+  i.material-icons {
+    color: $blue;
+    padding-right: 4px;
+  }
 }
 
 /* Top Bar */
@@ -110,22 +117,23 @@ label {
 app-header {
   width: 100%;
   height: 68px;
-  background-color: #1976d2;
+  background-color: $blue;
   padding: 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
 
-app-header h1 {
-  color: white;
-  margin: 0;
+  h1 {
+    color: $white;
+    margin: 0;
+  }
 }
 
 /* Checkout Cart, Shipping Prices */
 
-.cart-item, .shipping-item {
+.cart-item,
+.shipping-item {
   width: 100%;
   min-width: 400px;
   max-width: 450px;
@@ -135,7 +143,7 @@ app-header h1 {
   padding: 16px 32px;
   margin-bottom: 8px;
   border-radius: 2px;
-  background-color: #EEEEEE;
+  background-color: $cartGray;
 }
 
 
